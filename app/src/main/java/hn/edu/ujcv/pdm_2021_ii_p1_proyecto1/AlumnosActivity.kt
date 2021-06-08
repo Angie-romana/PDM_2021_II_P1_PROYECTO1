@@ -8,4 +8,8 @@ class AlumnosActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_alumnos)
     }
+
+    fun prueba(){
+        println("Hola")
+    }
 }
