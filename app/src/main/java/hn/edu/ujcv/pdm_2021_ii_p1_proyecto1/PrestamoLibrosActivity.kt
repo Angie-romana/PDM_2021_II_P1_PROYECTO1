@@ -72,31 +72,4 @@ class PrestamoLibrosActivity : AppCompatActivity() {
         txtFechaDevolucion.setText("")
         txtNumeroLibro.requestFocus()
     }
-
-   /* fun validarFecha(dia:String,mes:String, año:String){
-        var nuevoMes: Int
-        var nuevoDia:Int
-        var nuevoAño:Int
-        var mesesCon30Dias = arrayOf(1,3,5,7,8,10,12)
-        var mesesCon31Dias = arrayListOf<Int>(4,6,8,11)
-        var mesesCon28Dias = arrayOf(2)
-        if(dia.toInt()>= 28){
-            if(mes.toInt() == 2){
-                nuevoAño = año.toInt()
-                nuevoMes = 3
-                nuevoDia = 3
-            }
-        if(dia.toInt() >=30){
-            if(mes.toInt()==1 || mes.toInt()==3 || mes.toInt()==5 || mes.toInt()==7
-                || mes.toInt()==8 || mes.toInt()==10 || mes.toInt()==12){
-                if(mes.toInt()==12){
-                    nuevoAño = año.toInt() + 1
-                    nuevoMes = 1
-                    nuevoDia = (30 - )
-                }
-
-            }
-        }
-        }
-    }*/
 }
