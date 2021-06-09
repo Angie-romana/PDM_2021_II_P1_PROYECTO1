@@ -1,22 +1,43 @@
 package hn.edu.ujcv.pdm_2021_ii_p1_proyecto1
 
 import android.app.DatePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_prestamo_libros.*
-import java.util.*
+import java.util.Calendar
+import java.util.Date
 
 class PrestamoLibrosActivity : AppCompatActivity() {
+    var prestamos: HashMap<Int,String> = hashMapOf()
+    var numero = 0
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_prestamo_libros)
+        inicializar()
         imvFechaPrestamo.setOnClickListener { capturarFecha() }
         btnGuardar.setOnClickListener { guardar() }
+        btnVisualizar.setOnClickListener { visualizar() }
         }
 
 
     private fun guardar(){
+        val dato = StringBuilder()
+        numero+=1
+        dato.append(txtNumeroCuenta.text.toString().trim()).append("|")
+        dato.append(txtNumeroPrestamoLibro.text.toString()).append("|")
+        dato.append(txtNumeroLibro.text.toString()).append("|")
+        dato.append(txtFechaPrestamo.text.toString()).append("|")
+        dato.append(txtFechaDevolucion.text.toString())
+        prestamos.put(numero,dato.toString())
+        btnVisualizar.isEnabled = true
+        limpiarCampos()
+    }
 
+    private fun visualizar() {
+        val intent = Intent(this, VisualizarPrestamoLibrosActivity::class.java)
+        intent.putExtra("prestamos",prestamos)
+        startActivity(intent)
     }
 
     private fun capturarFecha() {
@@ -37,6 +58,19 @@ class PrestamoLibrosActivity : AppCompatActivity() {
             txtFechaDevolucion.setText(""+dia+"/"+mes+"/"+año)
         },año,mes-1,dia)
         dpd.show()
+    }
+
+    private fun inicializar() {
+        btnVisualizar.isEnabled = false
+    }
+
+    private fun limpiarCampos(){
+        txtNumeroCuenta.setText("")
+        txtNumeroPrestamoLibro.setText("")
+        txtNumeroLibro.setText("")
+        txtFechaPrestamo.setText("")
+        txtFechaDevolucion.setText("")
+        txtNumeroLibro.requestFocus()
     }
 
    /* fun validarFecha(dia:String,mes:String, año:String){
