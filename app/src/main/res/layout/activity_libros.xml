@@ -27,24 +27,24 @@
         android:ems="10"
         android:hint="Número del Libro"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtNombreLibro"
+        app:layout_constraintBottom_toTopOf="@+id/txtNumeroPrestamoLibro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txvNumeroLibro"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/txvTitulo" />
 
     <TextView
-        android:id="@+id/txvNombreLibro"
+        android:id="@+id/txvNumeroPrestamoLibro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginEnd="3dp"
         android:background="@drawable/libro1"
-        app:layout_constraintEnd_toStartOf="@+id/txtNombreLibro"
+        app:layout_constraintEnd_toStartOf="@+id/txtNumeroPrestamoLibro"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtNombreLibro" />
+        app:layout_constraintTop_toTopOf="@+id/txtNumeroPrestamoLibro" />
 
     <EditText
-        android:id="@+id/txtNombreLibro"
+        android:id="@+id/txtNumeroPrestamoLibro"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="37dp"
@@ -53,24 +53,24 @@
         android:ems="10"
         android:hint="Nombre del Libro"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtAutor"
+        app:layout_constraintBottom_toTopOf="@+id/txtFechaPrestamo"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txvNombreLibro"
+        app:layout_constraintStart_toEndOf="@+id/txvNumeroPrestamoLibro"
         app:layout_constraintTop_toBottomOf="@+id/txtNumeroLibro" />
 
     <TextView
-        android:id="@+id/txvAutor"
+        android:id="@+id/txvFechaPrestamo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginEnd="3dp"
         android:background="@drawable/autor"
-        app:layout_constraintEnd_toStartOf="@+id/txtAutor"
+        app:layout_constraintEnd_toStartOf="@+id/txtFechaPrestamo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtAutor" />
+        app:layout_constraintTop_toTopOf="@+id/txtFechaPrestamo" />
 
     <EditText
-        android:id="@+id/txtAutor"
+        android:id="@+id/txtFechaPrestamo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="37dp"
@@ -78,24 +78,24 @@
         android:ems="10"
         android:hint="Autor"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtFechaPublicacion"
+        app:layout_constraintBottom_toTopOf="@+id/txtFechaDevolucion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txvAutor"
-        app:layout_constraintTop_toBottomOf="@+id/txtNombreLibro" />
+        app:layout_constraintStart_toEndOf="@+id/txvFechaPrestamo"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumeroPrestamoLibro" />
 
     <TextView
-        android:id="@+id/txvFecha"
+        android:id="@+id/txvFechaDevolucion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginEnd="4dp"
         android:background="@drawable/fecha"
-        app:layout_constraintBottom_toBottomOf="@+id/txtFechaPublicacion"
-        app:layout_constraintEnd_toStartOf="@+id/txtFechaPublicacion"
+        app:layout_constraintBottom_toBottomOf="@+id/txtFechaDevolucion"
+        app:layout_constraintEnd_toStartOf="@+id/txtFechaDevolucion"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/txtFechaPublicacion"
+        android:id="@+id/txtFechaDevolucion"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="41dp"
@@ -103,24 +103,24 @@
         android:ems="10"
         android:hint="Fecha de Publicación"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtEditorial"
+        app:layout_constraintBottom_toTopOf="@+id/txtNumeroCuenta"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txvFecha"
-        app:layout_constraintTop_toBottomOf="@+id/txtAutor" />
+        app:layout_constraintStart_toEndOf="@+id/txvFechaDevolucion"
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaPrestamo" />
 
     <TextView
-        android:id="@+id/txvEditorial"
+        android:id="@+id/txvNumeroCuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginEnd="4dp"
         android:background="@drawable/editorial"
-        app:layout_constraintBottom_toBottomOf="@+id/txtEditorial"
-        app:layout_constraintEnd_toStartOf="@+id/txtEditorial"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNumeroCuenta"
+        app:layout_constraintEnd_toStartOf="@+id/txtNumeroCuenta"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/txtEditorial"
+        android:id="@+id/txtNumeroCuenta"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="40dp"
@@ -130,11 +130,11 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/btnGuardar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txvEditorial"
-        app:layout_constraintTop_toBottomOf="@+id/txtFechaPublicacion" />
+        app:layout_constraintStart_toEndOf="@+id/txvNumeroCuenta"
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaDevolucion" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/txvTitulo"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="47dp"
@@ -165,7 +165,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnVisualizar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEditorial" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNumeroCuenta" />
 
     <Button
         android:id="@+id/btnVisualizar"

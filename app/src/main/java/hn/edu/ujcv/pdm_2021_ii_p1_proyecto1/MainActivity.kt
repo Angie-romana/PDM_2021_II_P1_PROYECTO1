@@ -13,5 +13,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, LibrosActivity::class.java)
             startActivity(intent)
         }
+        btnPrestamoLibro.setOnClickListener {
+            val intent = Intent(this, PrestamoLibrosActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
