@@ -2,6 +2,7 @@ package hn.edu.ujcv.pdm_2021_ii_p1_proyecto1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_visualizar_prestamo_libros.*
 import kotlinx.android.synthetic.main.activity_visualizar_prestamo_libros.txtNumeroCuenta
 
@@ -39,7 +40,11 @@ class VisualizarPrestamoLibrosActivity : AppCompatActivity() {
                     txtMostrarFechaPrestamo.setText(fechaPrestamo)
                     txtNumeroLibroPrestado.setText(numeroLibro)
                     txtFechaDevolucionLibro.setText(fechaDevolucion)
+                }else{
+                    Toast.makeText(this, "No se ha encontrado este número de cuenta", Toast.LENGTH_SHORT).show()
+                    txtBuscar.setText("")
                 }
             }
         }
+
     }
