@@ -17,7 +17,7 @@ class PrestamoLibrosActivity : AppCompatActivity() {
         inicializar()
         imvFechaPrestamo.setOnClickListener { capturarFecha() }
         btnGuardar.setOnClickListener { guardar() }
-        btnVisualizar.setOnClickListener { visualizar() }
+        btnSave.setOnClickListener { visualizar() }
         }
 
 
@@ -30,7 +30,7 @@ class PrestamoLibrosActivity : AppCompatActivity() {
         dato.append(txtFechaPrestamo.text.toString()).append("|")
         dato.append(txtFechaDevolucion.text.toString())
         prestamos.put(numero,dato.toString())
-        btnVisualizar.isEnabled = true
+        btnSave.isEnabled = true
         limpiarCampos()
     }
 
@@ -61,7 +61,7 @@ class PrestamoLibrosActivity : AppCompatActivity() {
     }
 
     private fun inicializar() {
-        btnVisualizar.isEnabled = false
+        btnSave.isEnabled = false
     }
 
     private fun limpiarCampos(){
