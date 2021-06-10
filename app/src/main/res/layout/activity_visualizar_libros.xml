@@ -4,6 +4,156 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VisualizarLibrosActivity">
+    android:background="@drawable/fondo1"
+    tools:context=".PrestamoLibrosActivity">
+
+    <TextView
+        android:id="@+id/txvDiseño"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="8dp"
+        android:background="#DFC6EF"
+        app:layout_constraintBottom_toTopOf="@+id/txvNombreLibro2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnBuscarLibro"
+        android:layout_width="132dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="175dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="30dp"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/txvmostrarNombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtNumeroLibro2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvmostrarNombre"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="442dp"
+        android:clickable="false"
+        android:fontFamily="sans-serif-medium"
+        android:text="Nombre del Libro"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvNombreLibro2"
+        app:layout_constraintTop_toBottomOf="@+id/btnBuscarLibro" />
+
+    <TextView
+        android:id="@+id/txvNombreLibro2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/libro1"
+        app:layout_constraintBottom_toTopOf="@+id/txvAutor2"
+        app:layout_constraintEnd_toStartOf="@+id/txvmostrarNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvDiseño" />
+
+    <TextView
+        android:id="@+id/txvAutor2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/autor"
+        app:layout_constraintBottom_toTopOf="@+id/txvFecha2"
+        app:layout_constraintEnd_toStartOf="@+id/tvxMostrarAutor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvNombreLibro2" />
+
+    <TextView
+        android:id="@+id/txvFecha2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/fecha"
+        app:layout_constraintBottom_toTopOf="@+id/txvEditorial2"
+        app:layout_constraintEnd_toStartOf="@+id/txvMostrarFecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvAutor2" />
+
+    <TextView
+        android:id="@+id/txvMostrarFecha"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Fecha de Publicacion"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/txvEditorial2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvFecha2"
+        app:layout_constraintTop_toTopOf="@+id/txvFecha2" />
+
+    <TextView
+        android:id="@+id/txvEditorial2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginBottom="248dp"
+        android:background="@drawable/editorial"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txvMostrarEditorial"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvFecha2" />
+
+    <TextView
+        android:id="@+id/txvMostrarEditorial"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Editorial"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txvEditorial2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvEditorial2"
+        app:layout_constraintTop_toTopOf="@+id/txvEditorial2" />
+
+    <TextView
+        android:id="@+id/tvxMostrarAutor"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="65dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Autor"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/txvFecha2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvAutor2"
+        app:layout_constraintTop_toTopOf="@+id/txvmostrarNombre" />
+
+    <EditText
+        android:id="@+id/txtNumeroLibro2"
+        android:layout_width="193dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="12dp"
+        android:ems="10"
+        android:hint="@string/txtnumerolibro"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/txvDiseño"
+        app:layout_constraintEnd_toStartOf="@+id/btnBuscarLibro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txvDiseño" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
