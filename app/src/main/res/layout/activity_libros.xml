@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo2"
+    android:background="@drawable/fondo3"
     tools:context=".LibrosActivity">
 
     <TextView
@@ -25,52 +25,54 @@
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="48dp"
         android:ems="10"
-        android:hint="Número del Libro"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtNumeroPrestamoLibro"
+        android:hint="@string/txtnumerolibro"
+        android:inputType="number"
+        android:maxLength="5"
+        app:layout_constraintBottom_toTopOf="@+id/txtNombreLibro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txvNumeroLibro"
-        app:layout_constraintTop_toBottomOf="@+id/txvTitulo" />
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
-        android:id="@+id/txvNumeroPrestamoLibro"
+        android:id="@+id/txvNombreLibro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginEnd="3dp"
         android:background="@drawable/libro1"
-        app:layout_constraintEnd_toStartOf="@+id/txtNumeroPrestamoLibro"
+        app:layout_constraintEnd_toStartOf="@+id/txtNombreLibro"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtNumeroPrestamoLibro" />
+        app:layout_constraintTop_toTopOf="@+id/txtNombreLibro" />
 
     <EditText
-        android:id="@+id/txtNumeroPrestamoLibro"
+        android:id="@+id/txtNombreLibro"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="38dp"
-        android:backgroundTint="@color/black"
         android:ems="10"
         android:hint="Nombre del Libro"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtFechaPrestamo"
+        android:maxLength="20"
+
+        app:layout_constraintBottom_toTopOf="@+id/txtAutor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txvNumeroPrestamoLibro"
+        app:layout_constraintStart_toEndOf="@+id/txvNombreLibro"
         app:layout_constraintTop_toBottomOf="@+id/txtNumeroLibro" />
 
     <TextView
-        android:id="@+id/txvFechaPrestamo"
+        android:id="@+id/txvAutor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginEnd="3dp"
         android:background="@drawable/autor"
-        app:layout_constraintEnd_toStartOf="@+id/txtFechaPrestamo"
+        app:layout_constraintEnd_toStartOf="@+id/txtAutor"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtFechaPrestamo" />
+        app:layout_constraintTop_toTopOf="@+id/txtAutor" />
 
     <EditText
-        android:id="@+id/txtFechaPrestamo"
+        android:id="@+id/txtAutor"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="37dp"
@@ -78,63 +80,66 @@
         android:ems="10"
         android:hint="Autor"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtFechaDevolucion"
+        android:maxLength="30"
+        app:layout_constraintBottom_toTopOf="@+id/txtFechaPublicacion"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txvFechaPrestamo"
-        app:layout_constraintTop_toBottomOf="@+id/txtNumeroPrestamoLibro" />
+        app:layout_constraintStart_toEndOf="@+id/txvAutor"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreLibro" />
 
     <TextView
-        android:id="@+id/txvFechaDevolucion"
+        android:id="@+id/txvFecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginEnd="4dp"
         android:background="@drawable/fecha"
-        app:layout_constraintBottom_toBottomOf="@+id/txtFechaDevolucion"
-        app:layout_constraintEnd_toStartOf="@+id/txtFechaDevolucion"
+        app:layout_constraintBottom_toBottomOf="@+id/txtFechaPublicacion"
+        app:layout_constraintEnd_toStartOf="@+id/txtFechaPublicacion"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/txtFechaDevolucion"
+        android:id="@+id/txtFechaPublicacion"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="41dp"
         android:layout_marginBottom="38dp"
         android:ems="10"
         android:hint="Fecha de Publicación"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/txtNumeroCuenta"
+        android:inputType="date"
+        android:maxLength="9"
+        app:layout_constraintBottom_toTopOf="@+id/txtEditorial"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txvFechaDevolucion"
-        app:layout_constraintTop_toBottomOf="@+id/txtFechaPrestamo" />
+        app:layout_constraintStart_toEndOf="@+id/txvFecha"
+        app:layout_constraintTop_toBottomOf="@+id/txtAutor" />
 
     <TextView
-        android:id="@+id/txvNumeroCuenta"
+        android:id="@+id/txvEditorial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="38dp"
         android:layout_marginEnd="4dp"
         android:background="@drawable/editorial"
-        app:layout_constraintBottom_toBottomOf="@+id/txtNumeroCuenta"
-        app:layout_constraintEnd_toStartOf="@+id/txtNumeroCuenta"
+        app:layout_constraintBottom_toBottomOf="@+id/txtEditorial"
+        app:layout_constraintEnd_toStartOf="@+id/txtEditorial"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/txtNumeroCuenta"
+        android:id="@+id/txtEditorial"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="53dp"
         android:ems="10"
-        android:hint="Editorial"
+        android:hint="@string/txteditorial"
         android:inputType="textPersonName"
+        android:maxLength="20"
         app:layout_constraintBottom_toTopOf="@+id/btnGuardar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txvNumeroCuenta"
-        app:layout_constraintTop_toBottomOf="@+id/txtFechaDevolucion" />
+        app:layout_constraintStart_toEndOf="@+id/txvEditorial"
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaPublicacion" />
 
     <TextView
-        android:id="@+id/txvTitulo"
+        android:id="@+id/textView6"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="47dp"
@@ -153,19 +158,16 @@
 
     <Button
         android:id="@+id/btnGuardar"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="125dp"
+        android:layout_height="61dp"
         android:layout_marginStart="38dp"
         android:layout_marginEnd="31dp"
         android:layout_marginBottom="88dp"
-        android:background="@android:color/holo_purple"
-        android:backgroundTint="#BA1F1F"
         android:text="Guardar"
-        app:iconTint="@color/purple_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnSave"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNumeroCuenta" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEditorial" />
 
     <Button
         android:id="@+id/btnSave"
@@ -173,7 +175,7 @@
         android:layout_height="60dp"
         android:layout_marginEnd="44dp"
         android:layout_marginBottom="84dp"
-        android:text="Visualizar Libros"
+        android:text="Visualizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnGuardar" />

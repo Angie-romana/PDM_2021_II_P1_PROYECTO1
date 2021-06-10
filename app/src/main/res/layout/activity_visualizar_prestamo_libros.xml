@@ -4,55 +4,198 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo4"
+    android:background="@drawable/fondo2"
     tools:context=".VisualizarPrestamoLibrosActivity">
 
     <EditText
         android:id="@+id/txtBuscar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="206dp"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginEnd="67dp"
         android:ems="10"
-        android:hint="Ingrese"
+        android:hint="@string/txtingresenumerocuenta"
         android:inputType="textPersonName"
-        android:text="Name"
-        app:layout_constraintEnd_toStartOf="@+id/btnBuscar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnBuscar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="11dp"
-        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/btnBuscar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtBuscar"
-        app:layout_constraintTop_toTopOf="@+id/txtBuscar" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:autofillHints=""/>
 
     <EditText
-        android:id="@+id/txtNumeroCuenta"
+        android:id="@+id/txtNumeroPrestamo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="60dp"
+        android:clickable="false"
+        android:focusable="false"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Numero de cuenta"
+        android:enabled="true"
+        android:hint="@string/txtnumeroprestamo"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvIconoNumeroPrestamo"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumeroCuenta"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/txtNumeroLibroPrestado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:ems="10"
+        android:enabled="true"
+        android:hint="@string/txtnumerolibrovisualizar"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/txtMostrarFechaPrestamo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvIconoNumeroLibro"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/txvIconoNumeroCuenta"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="77dp"
+        android:background="@drawable/editorial"
+        app:layout_constraintBottom_toTopOf="@+id/txtNumeroLibroPrestado"
+        app:layout_constraintEnd_toStartOf="@+id/txtNumeroCuenta"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtBuscar" />
+        app:layout_constraintTop_toTopOf="@+id/btnBuscar" />
+
+    <TextView
+        android:id="@+id/txvIconoNumeroPrestamo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/numerolibro"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNumeroPrestamo"
+        app:layout_constraintEnd_toStartOf="@+id/txtNumeroPrestamo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtNumeroPrestamo" />
+
+    <TextView
+        android:id="@+id/txvIconoFechaDevolucion"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/returnbook"
+        app:layout_constraintBottom_toBottomOf="@+id/txtFechaDevolucionLibro"
+        app:layout_constraintEnd_toStartOf="@+id/txtFechaDevolucionLibro"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtFechaDevolucionLibro" />
+
+    <TextView
+        android:id="@+id/txvIconoNumeroLibro"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="77dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="77dp"
+        android:background="@drawable/libro1"
+        app:layout_constraintBottom_toTopOf="@+id/txvIconoFechaDevolucion"
+        app:layout_constraintEnd_toStartOf="@+id/txtNumeroLibroPrestado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumeroCuenta" />
 
     <EditText
         android:id="@+id/txtMostrarFechaPrestamo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="11dp"
+        android:clickable="false"
+        android:focusable="false"
         android:ems="10"
+        android:enabled="true"
+        android:hint="@string/txtfechaprestamovisualizar"
         android:inputType="textPersonName"
-        android:text="Name"
+        app:layout_constraintBottom_toTopOf="@+id/txtFechaDevolucionLibro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvIconoFechaPrestamo"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/txtFechaDevolucionLibro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="175dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:ems="10"
+        android:enabled="true"
+        android:hint="@string/txtfechadevoulucionvisualizar"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvIconoFechaDevolucion"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/txtNumeroCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="72dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:ems="10"
+        android:enabled="true"
+        android:hint="@string/txtnumerocuenta"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/txtNumeroLibroPrestado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvIconoNumeroCuenta"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/txvIconoFechaPrestamo"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginBottom="17dp"
+        android:background="@drawable/fecha"
+        app:layout_constraintBottom_toTopOf="@+id/txtFechaDevolucionLibro"
+        app:layout_constraintEnd_toStartOf="@+id/txtMostrarFechaPrestamo"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNumeroCuenta" />
+        app:layout_constraintTop_toBottomOf="@+id/txvIconoNumeroLibro" />
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginBottom="27dp"
+        android:text="@string/btnbuscar"
+        app:layout_constraintBottom_toTopOf="@+id/txtNumeroCuenta"
+        app:layout_constraintStart_toStartOf="@+id/txtNumeroCuenta" />
+
+    <TextView
+        android:id="@+id/txvTituloVisualizarPrestamoLibro"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="24dp"
+        android:text="@string/txvTitulo"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/txtBuscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

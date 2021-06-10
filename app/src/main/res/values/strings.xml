@@ -7,6 +7,15 @@
     <string name="btnvisualisarprestamo">Visualizar préstamos</string>
     <string name="btnguardarprestamo">Guardar Préstamos</string>
     <string name="txtnumerocuenta">Número de cuenta</string>
+    <string name="txtnumerocuentaprestamo">Número de cuenta</string>
     <string name="txvfechadevolucion">Fecha de devolución</string>
     <string name="imvselectorfecha">Selector de fecha</string>
+    <string name="txtingresenumerocuenta">Ingrese un número de cuenta</string>
+    <string name="txtnumeroprestamo">Número de préstamo</string>
+    <string name="txtnumerolibrovisualizar">Número de libro</string>
+    <string name="txtfechaprestamovisualizar">Fecha de Préstamo</string>
+    <string name="txtfechadevoulucionvisualizar">Fecha de devolución</string>
+    <string name="btnbuscar">Buscar</string>
+    <string name="txvTitulo">Visualizar prestamos de libros</string>
+    <string name="txteditorial">Editorial</string>
 </resources>
