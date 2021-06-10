@@ -156,7 +156,7 @@
         android:layout_marginStart="37dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="43dp"
-        android:background="@drawable/fecha"
+        android:background="@drawable/returnbook"
         app:layout_constraintBottom_toTopOf="@+id/txvNumeroCuenta"
         app:layout_constraintEnd_toStartOf="@+id/txtFechaDevolucion"
         app:layout_constraintStart_toStartOf="parent"

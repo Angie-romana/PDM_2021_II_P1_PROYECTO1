@@ -2,7 +2,6 @@ package hn.edu.ujcv.pdm_2021_ii_p1_proyecto1
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_prestamo_libros.*
 import kotlinx.android.synthetic.main.activity_visualizar_prestamo_libros.*
 import kotlinx.android.synthetic.main.activity_visualizar_prestamo_libros.txtNumeroCuenta
 
@@ -23,22 +22,24 @@ class VisualizarPrestamoLibrosActivity : AppCompatActivity() {
 
         private fun llenar(){
             var numeroCuenta:String
+            var numeroPrestamo:String
+            var numeroLibro:String
             var fechaPrestamo:String
+            var fechaDevolucion:String
             for(prestamo in prestamos) {
                 val lista = prestamo.toString().split("|","=")
-                numeroCuenta = lista[1].toString()
+                numeroCuenta = lista[1]
+                numeroPrestamo = lista[2]
+                numeroLibro = lista[3]
                 fechaPrestamo = lista[4]
+                fechaDevolucion = lista[5]
                 if (txtBuscar.text.toString().equals(numeroCuenta)) {
                     txtNumeroCuenta.setText(numeroCuenta)
+                    txtNumeroPrestamo.setText(numeroPrestamo)
                     txtMostrarFechaPrestamo.setText(fechaPrestamo)
-
-                        /* Numero cuenta ->1
-                        Numero prestamo ->2
-                        Numero libro ->3
-                        Fecha prestamo ->4
-                        fecha devolucion -> 5*/
+                    txtNumeroLibroPrestado.setText(numeroLibro)
+                    txtFechaDevolucionLibro.setText(fechaDevolucion)
                 }
-
             }
         }
     }
