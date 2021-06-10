@@ -17,4 +17,5 @@
     <string name="txtfechadevoulucionvisualizar">Fecha de devolución</string>
     <string name="btnbuscar">Buscar</string>
     <string name="txvTitulo">Visualizar prestamos de libros</string>
+    <string name="txteditorial">Editorial</string>
 </resources>

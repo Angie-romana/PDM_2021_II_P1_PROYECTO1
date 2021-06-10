@@ -19,7 +19,7 @@
         app:layout_constraintBottom_toTopOf="@+id/btnBuscar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:autofillHints="" />
+        android:autofillHints=""/>
 
     <EditText
         android:id="@+id/txtNumeroPrestamo"
