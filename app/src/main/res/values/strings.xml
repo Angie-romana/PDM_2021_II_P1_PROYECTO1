@@ -24,4 +24,5 @@
     <string name="txtAutor">Autor</string>
     <string name="btnguarda">Guardar</string>
     <string name="btnvisualizar">Visualizar</string>
+    <string name="txvmostrar_calendario_icono">Mostrar Calendario icono</string>
 </resources>

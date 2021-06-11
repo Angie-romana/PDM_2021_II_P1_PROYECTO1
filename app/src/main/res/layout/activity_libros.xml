@@ -94,7 +94,7 @@
         android:layout_marginEnd="4dp"
         android:background="@drawable/fecha"
         android:clickable="false"
-        android:contentDescription="Mostrar Calendario icono"
+        android:contentDescription="@string/txvmostrar_calendario_icono"
         android:focusable="false"
         app:layout_constraintBottom_toBottomOf="@+id/txtFechaPublicacion"
         app:layout_constraintEnd_toStartOf="@+id/txtFechaPublicacion"
