@@ -3,6 +3,7 @@ package hn.edu.ujcv.pdm_2021_ii_p1_proyecto1
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_prestamo_libros.*
 import java.util.Calendar
@@ -17,7 +18,7 @@ class PrestamoLibrosActivity : AppCompatActivity() {
         inicializar()
         imvFechaPrestamo.setOnClickListener { capturarFecha() }
         btnGuardar.setOnClickListener { guardar() }
-        btnSave.setOnClickListener { visualizar() }
+        btnVisualizar.setOnClickListener { visualizar() }
         }
 
 
@@ -30,7 +31,8 @@ class PrestamoLibrosActivity : AppCompatActivity() {
         dato.append(txtFechaPrestamo.text.toString()).append("|")
         dato.append(txtFechaDevolucion.text.toString())
         prestamos.put(numero,dato.toString())
-        btnSave.isEnabled = true
+        btnVisualizar.isEnabled = true
+        Toast.makeText(this, "Se ha guardado el préstamo del libro", Toast.LENGTH_SHORT).show()
         limpiarCampos()
     }
 
@@ -61,7 +63,7 @@ class PrestamoLibrosActivity : AppCompatActivity() {
     }
 
     private fun inicializar() {
-        btnSave.isEnabled = false
+        btnVisualizar.isEnabled = false
     }
 
     private fun limpiarCampos(){

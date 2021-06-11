@@ -27,6 +27,11 @@ class VisualizarPrestamoLibrosActivity : AppCompatActivity() {
             var numeroLibro:String
             var fechaPrestamo:String
             var fechaDevolucion:String
+            txtNumeroCuenta.setText("")
+            txtNumeroPrestamo.setText("")
+            txtMostrarFechaPrestamo.setText("")
+            txtNumeroLibroPrestado.setText("")
+            txtFechaDevolucionLibro.setText("")
             for(prestamo in prestamos) {
                 val lista = prestamo.toString().split("|","=")
                 numeroCuenta = lista[1]
@@ -40,11 +45,10 @@ class VisualizarPrestamoLibrosActivity : AppCompatActivity() {
                     txtMostrarFechaPrestamo.setText(fechaPrestamo)
                     txtNumeroLibroPrestado.setText(numeroLibro)
                     txtFechaDevolucionLibro.setText(fechaDevolucion)
-                }else{
-                    Toast.makeText(this, "No se ha encontrado este número de cuenta", Toast.LENGTH_SHORT).show()
-                    txtBuscar.setText("")
+                    return
                 }
             }
+            Toast.makeText(this, "No se ha encontrado este número de cuenta", Toast.LENGTH_SHORT).show()
         }
 
     }
