@@ -3,13 +3,8 @@ package hn.edu.ujcv.pdm_2021_ii_p1_proyecto1
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_libros.*
 import kotlinx.android.synthetic.main.activity_prestamo_libros.*
-import kotlinx.android.synthetic.main.activity_prestamo_libros.btnGuardar
-import kotlinx.android.synthetic.main.activity_prestamo_libros.btnVisualizar
-import kotlinx.android.synthetic.main.activity_prestamo_libros.txtNumeroLibro
 import java.util.Calendar
 import java.util.Date
 
@@ -22,7 +17,7 @@ class PrestamoLibrosActivity : AppCompatActivity() {
         inicializar()
         imvFechaPrestamo.setOnClickListener { capturarFecha() }
         btnGuardar.setOnClickListener { guardar() }
-        btnVisualizar.setOnClickListener { visualizar() }
+        btnSave.setOnClickListener { visualizar() }
         }
 
 
@@ -35,14 +30,9 @@ class PrestamoLibrosActivity : AppCompatActivity() {
         dato.append(txtFechaPrestamo.text.toString()).append("|")
         dato.append(txtFechaDevolucion.text.toString())
         prestamos.put(numero,dato.toString())
-        noVacio()
-        if (noVacio()){
-            btnVisualizar.isEnabled = true
-            Toast.makeText(this, "Se ha guardado correctamente el préstamo del libro", Toast.LENGTH_SHORT).show()
-            limpiarCampos()
-        }
+        btnSave.isEnabled = true
+        limpiarCampos()
     }
-
 
     private fun visualizar() {
         val intent = Intent(this, VisualizarPrestamoLibrosActivity::class.java)
@@ -71,7 +61,7 @@ class PrestamoLibrosActivity : AppCompatActivity() {
     }
 
     private fun inicializar() {
-        btnVisualizar.isEnabled = false
+        btnSave.isEnabled = false
     }
 
     private fun limpiarCampos(){
@@ -81,26 +71,5 @@ class PrestamoLibrosActivity : AppCompatActivity() {
         txtFechaPrestamo.setText("")
         txtFechaDevolucion.setText("")
         txtNumeroLibro.requestFocus()
-    }
-
-    fun noVacio() : Boolean{
-        if(txtNumeroLibro.text.toString().isEmpty()) {
-            txtNumeroLibro.error ="Debe rellenar número de libro"
-            return false
-        }else if(txtNumeroPrestamoLibro.text.toString().isEmpty()){
-            txtNumeroPrestamoLibro.error = "Debe rellenar el número de prestamo del libro"
-            return false
-        }
-
-        if(txtFechaPrestamo.text.toString().isEmpty()) {
-            txtFechaPrestamo.error ="Debe rellenar la fecha de préstamo del libro"
-            return false
-        }
-        if(txtNumeroCuenta.text.toString().isEmpty()) {
-            txtNumeroCuenta.error ="Debe rellenar el número de cuenta"
-            return false
-        }
-        return true
-
     }
 }

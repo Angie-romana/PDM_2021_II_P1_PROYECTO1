@@ -163,7 +163,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imvFechaPrestamo" />
 
     <Button
-        android:id="@+id/btnVisualizar"
+        android:id="@+id/btnSave"
         android:layout_width="182dp"
         android:layout_height="62dp"
         android:layout_marginStart="191dp"
@@ -202,7 +202,7 @@
         android:ems="10"
         android:hint="@string/txtnumerocuenta"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/btnVisualizar"
+        app:layout_constraintBottom_toTopOf="@+id/btnSave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txvNumeroCuenta"
         app:layout_constraintTop_toBottomOf="@+id/txtFechaDevolucion"
