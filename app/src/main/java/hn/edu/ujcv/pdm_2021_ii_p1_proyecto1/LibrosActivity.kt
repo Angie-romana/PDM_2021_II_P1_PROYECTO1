@@ -1,17 +1,23 @@
 package hn.edu.ujcv.pdm_2021_ii_p1_proyecto1
 
+import android.app.DatePickerDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_libros.*
+import kotlinx.android.synthetic.main.activity_libros.btnGuardar
+import kotlinx.android.synthetic.main.activity_libros.btnVisualizar
+import kotlinx.android.synthetic.main.activity_libros.txtNumeroLibro
+import kotlinx.android.synthetic.main.activity_prestamo_libros.*
+import java.util.*
+import kotlin.collections.HashMap
 
 
 open class LibrosActivity : AppCompatActivity(),View.OnClickListener {
     var valores: HashMap<Int, String> = hashMapOf()
-    var numero = 0
-
+    var numero:Int = 0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,9 +25,29 @@ open class LibrosActivity : AppCompatActivity(),View.OnClickListener {
         setContentView(R.layout.activity_libros)
 
         inicializar()
-
+        txvFecha.setOnClickListener { capturarFecha() }
         btnGuardar.setOnClickListener { guardar() }
         btnVisualizar.setOnClickListener { enviarDatos() }
+
+    }
+
+    private fun capturarFecha() {
+        //Calendar
+        val c = Calendar.getInstance()
+        val date = Date()
+
+        var año = c.get(Calendar.YEAR)
+        var mes = c.get(Calendar.MONTH)+1
+        var dia = c.get(Calendar.DAY_OF_MONTH)
+
+        val dpd = DatePickerDialog(this, { view, mAño, mMes, mDia ->
+            txtFechaPublicacion.setText(""+mDia+"/"+(mMes.toInt() +1)+"/"+mAño)
+
+        },año,mes-1,dia)
+        dpd.show()
+
+    }
+    fun parecidos(dato: String){
 
     }
 
@@ -79,16 +105,14 @@ open class LibrosActivity : AppCompatActivity(),View.OnClickListener {
             return false
         }
         if(txtEditorial.text.toString().isEmpty()) {
-            txtEditorial.error ="Debe rellenar la fecha"
+            txtEditorial.error ="Debe rellenar la editorial"
             return false
         }
-
 
 
         return true
 
     }
-
 
 
     private fun enviarDatos() {
@@ -99,30 +123,48 @@ open class LibrosActivity : AppCompatActivity(),View.OnClickListener {
 
     private fun guardar() {
 
+
         var dato = StringBuilder()
         numero += 1
-        dato.append(txtNumeroLibro.text.toString())
-        dato.append(txtNombreLibro.text.toString())
-        dato.append(txtAutor.text.toString())
-        dato.append(txtFechaPublicacion.text.toString())
-        dato.append(txtEditorial.text.toString())
+        dato.append(txtNumeroLibro.text.toString()).append("|")
+        dato.append(txtNombreLibro.text.toString().trim()).append("|")
+        dato.append(txtAutor.text.toString().trim()).append("|")
+        dato.append(txtFechaPublicacion.text.toString()).append("|")
+        dato.append(txtEditorial.text.toString().trim())
         valores.put(numero, dato.toString())
-        btnGuardar.isEnabled = true
 
         noVacio()
         minLength()
-        if(noNumeros(txtNombreLibro.toString())){
-            txtNombreLibro.error ="Solo se permiten letras"
-        }
+
+     /*   while(contieneNumero(txtEditorial.text.toString())){
+            txtEditorial.error ="La editorial no puede contener números"
+        }*/
+
         if (noVacio()== true && minLength()==true){
             btnVisualizar.isEnabled = true
-            Toast.makeText(this, "Se ha Guardado correctamente libros", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Se ha guardado correctamente la información", Toast.LENGTH_SHORT).show()
+            limpiar()
         }
 
 
-
-
-
+    }
+/*    fun contieneNumero(texto:String):Boolean{
+        val prueba = texto.split(' ');
+        var c :Char
+        for(i in 1..texto.length){
+            c = texto.get(i)
+            if(c.isDigit()){
+                return true
+            }
+        }
+        return false
+    }*/
+    fun limpiar(){
+        txtNumeroLibro.setText("")
+        txtNombreLibro.setText("")
+        txtAutor.setText("")
+        txtFechaPublicacion.setText("")
+        txtEditorial.setText("")
     }
 
     private fun inicializar() {
@@ -141,11 +183,6 @@ open class LibrosActivity : AppCompatActivity(),View.OnClickListener {
         }
 
     }
-}
-class Validaciones():LibrosActivity(){
-
-
-
 }
 
 
