@@ -31,7 +31,7 @@
         app:layout_constraintBottom_toTopOf="@+id/txtNombreLibro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txvNumeroLibro"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+        app:layout_constraintTop_toBottomOf="@+id/txvTituloPantallaLibro" />
 
     <TextView
         android:id="@+id/txvNombreLibro"
@@ -51,7 +51,7 @@
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="38dp"
         android:ems="10"
-        android:hint="Nombre del Libro"
+        android:hint="@string/txtnombrelibro"
         android:inputType="textPersonName"
         android:maxLength="20"
 
@@ -78,7 +78,7 @@
         android:layout_marginEnd="37dp"
         android:layout_marginBottom="30dp"
         android:ems="10"
-        android:hint="Autor"
+        android:hint="@string/txtAutor"
         android:inputType="textPersonName"
         android:maxLength="30"
         app:layout_constraintBottom_toTopOf="@+id/txtFechaPublicacion"
@@ -93,6 +93,9 @@
         android:layout_marginStart="38dp"
         android:layout_marginEnd="4dp"
         android:background="@drawable/fecha"
+        android:clickable="false"
+        android:contentDescription="Mostrar Calendario icono"
+        android:focusable="false"
         app:layout_constraintBottom_toBottomOf="@+id/txtFechaPublicacion"
         app:layout_constraintEnd_toStartOf="@+id/txtFechaPublicacion"
         app:layout_constraintStart_toStartOf="parent" />
@@ -104,7 +107,7 @@
         android:layout_marginEnd="41dp"
         android:layout_marginBottom="38dp"
         android:ems="10"
-        android:hint="Fecha de Publicación"
+        android:hint="@string/txtfechapublicacion"
         android:inputType="date"
         android:maxLength="9"
         app:layout_constraintBottom_toTopOf="@+id/txtEditorial"
@@ -139,17 +142,18 @@
         app:layout_constraintTop_toBottomOf="@+id/txtFechaPublicacion" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/txvTituloPantallaLibro"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="47dp"
         android:layout_marginTop="68dp"
         android:layout_marginEnd="47dp"
         android:layout_marginBottom="33dp"
-        android:background="@android:drawable/divider_horizontal_dark"
+        android:background="#83FFFFFF"
         android:capitalize="words"
         android:fontFamily="sans-serif-black"
-        android:text="Libros"
+        android:text="@string/txtlibros"
+        android:textAlignment="center"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toTopOf="@+id/txtNumeroLibro"
         app:layout_constraintEnd_toEndOf="@+id/txtNumeroLibro"
@@ -163,19 +167,19 @@
         android:layout_marginStart="38dp"
         android:layout_marginEnd="31dp"
         android:layout_marginBottom="88dp"
-        android:text="Guardar"
+        android:text="@string/btnguarda"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnSave"
+        app:layout_constraintEnd_toStartOf="@+id/btnVisualizar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtEditorial" />
 
     <Button
-        android:id="@+id/btnSave"
+        android:id="@+id/btnVisualizar"
         android:layout_width="155dp"
         android:layout_height="60dp"
         android:layout_marginEnd="44dp"
         android:layout_marginBottom="84dp"
-        android:text="Visualizar"
+        android:text="@string/btnvisualizar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnGuardar" />

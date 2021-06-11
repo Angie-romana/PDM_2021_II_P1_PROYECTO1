@@ -4,8 +4,8 @@
     <string name="txvprestamolibro">Préstamo de libros</string>
     <string name="txtnumerolibro">Número del Libro</string>
     <string name="txtfechaprestamo">Fecha de préstamo</string>
-    <string name="btnvisualisarprestamo">Visualizar préstamos</string>
-    <string name="btnguardarprestamo">Guardar Préstamos</string>
+    <string name="btnvisualisarprestamo">Visualizar</string>
+    <string name="btnguardarprestamo">Guardar</string>
     <string name="txtnumerocuenta">Número de cuenta</string>
     <string name="txtnumerocuentaprestamo">Número de cuenta</string>
     <string name="txvfechadevolucion">Fecha de devolución</string>
@@ -18,4 +18,10 @@
     <string name="btnbuscar">Buscar</string>
     <string name="txvTitulo">Visualizar prestamos de libros</string>
     <string name="txteditorial">Editorial</string>
+    <string name="txtnombrelibro">Nombre del Libro</string>
+    <string name="txtfechapublicacion">Fecha de Publicación</string>
+    <string name="txtlibros">Libros</string>
+    <string name="txtAutor">Autor</string>
+    <string name="btnguarda">Guardar</string>
+    <string name="btnvisualizar">Visualizar</string>
 </resources>
