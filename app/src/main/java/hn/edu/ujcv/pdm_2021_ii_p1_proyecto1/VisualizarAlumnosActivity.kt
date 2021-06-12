@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_visualizar_alumnos.*
 import kotlinx.android.synthetic.main.activity_visualizar_libros.*
+import kotlinx.android.synthetic.main.activity_visualizar_prestamo_libros.*
 
 class VisualizarAlumnosActivity : AppCompatActivity() {
     var alumnos: HashMap<Int,String> = hashMapOf()
@@ -28,7 +29,11 @@ class VisualizarAlumnosActivity : AppCompatActivity() {
        var nombreCarrera: String
        var fechaPublicacion: String
        var correo: String
-
+       txtNumeroCuenta.setText("")
+       txtNumeroPrestamo.setText("")
+       txtMostrarFechaPrestamo.setText("")
+       txtNumeroLibroPrestado.setText("")
+       txtFechaDevolucionLibro.setText("")
        for(valor in alumnos){
            val lista = valor.toString().split("|","=")
 
@@ -47,8 +52,5 @@ class VisualizarAlumnosActivity : AppCompatActivity() {
            }
        }
        Toast.makeText(this, "No se ha encontrado el número de libro", Toast.LENGTH_SHORT).show()
-       txtBuscar.setText("")
     }
-
-
 }

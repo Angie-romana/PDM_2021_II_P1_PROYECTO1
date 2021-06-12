@@ -29,4 +29,15 @@
     <string name="btnalumnos">Alumnos</string>
     <string name="btnprestamolibro">Préstamo Libros</string>
     <string name="txvbienvenido">Bienvenido al Proyecto 1</string>
+    <string name="txvtituloalumnos">Alumnos</string>
+    <string name="txtcorreoelectronico">Correo Electrónico</string>
+    <string name="txtnombrecarrera">Nombre de la Carrera</string>
+    <string name="txtfechaingreso">Fecha de Ingreso</string>
+    <string name="txtnombrealumno">Nombre del Alumno</string>
+    <string name="imgnumerocuenta">Icono número de cuenta</string>
+    <string name="imgnombrealumno">Icono nombre del alumno</string>
+    <string name="imgnombrecarrera">Icono nombre de la carrera</string>
+    <string name="imgfechaingreso">Icono fecha de ingreso</string>
+    <string name="imgcorreoelectronico">Icono correo electrónico</string>
+    <string name="txvtitulovisualizaralumnos">Visualización de Alumnos</string>
 </resources>

@@ -4,7 +4,10 @@ import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_alumnos.*
+import kotlinx.android.synthetic.main.activity_alumnos.txtNumeroCuenta
+import kotlinx.android.synthetic.main.activity_prestamo_libros.*
 import java.util.*
 import kotlin.collections.HashMap
 
@@ -15,7 +18,7 @@ class AlumnosActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_alumnos)
         inicializar()
-        txtFechaIngreso.setOnClickListener { capturarFecha() }
+        imvFechaIngreso.setOnClickListener { capturarFecha() }
         btnSave.setOnClickListener { guardar() }
         btnVer.setOnClickListener { visualizar() }
     }
@@ -23,14 +26,42 @@ class AlumnosActivity : AppCompatActivity() {
     private fun guardar(){
         val dato = StringBuilder()
         numero+=1
-        dato.append(txtNumeroCuenta.text.toString().trim()).append("|")
-        dato.append(txtNombreAlumno.text.toString()).append("|")
-        dato.append(txtNombreCarrera.text.toString()).append("|")
+        dato.append(txtNumeroCuenta.text.toString()).append("|")
+        dato.append(txtNombreAlumno.text.toString().trim()).append("|")
+        dato.append(txtNombreCarrera.text.toString().trim()).append("|")
         dato.append(txtFechaIngreso.text.toString()).append("|")
         dato.append(txtCorreo.text.toString())
         alumno.put(numero,dato.toString())
-        btnSave.isEnabled = true
-        limpiarCampos()
+        noVacio()
+        if (noVacio()== true){
+            btnVer.isEnabled = true
+            Toast.makeText(this, "Se ha guardado al nuevo alumno", Toast.LENGTH_SHORT).show()
+            limpiarCampos()
+        }
+    }
+
+    fun noVacio() : Boolean{
+        if(txtNumeroCuenta.text.toString().isEmpty()) {
+            txtNumeroCuenta.error ="Debe rellenar el número de cuenta del alumno"
+            return false
+        }else if(txtNombreAlumno.text.toString().isEmpty()){
+            txtNombreAlumno.error = "Debe rellenar el nombre del alumno"
+            return false
+        }
+
+        if(txtNombreCarrera.text.toString().isEmpty()) {
+            txtNombreCarrera.error ="Debe rellenar el autor"
+            return false
+        }
+        if(txtFechaIngreso.text.toString().isEmpty()) {
+            txtFechaIngreso.error ="Debe seleccionar una fecha dando click en el ícono"
+            return false
+        }
+        if(txtCorreo.text.toString().isEmpty()) {
+            txtCorreo.error ="Debe rellenar el correo electrónico"
+            return false
+        }
+        return true
     }
 
     private fun visualizar() {
@@ -54,7 +85,7 @@ class AlumnosActivity : AppCompatActivity() {
         dpd.show()
     }
     private fun inicializar() {
-       // btnSave.isEnabled = false
+        btnVer.isEnabled = false
     }
 
     private fun limpiarCampos(){

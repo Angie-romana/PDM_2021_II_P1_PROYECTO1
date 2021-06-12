@@ -5,7 +5,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_libros.*
 import kotlinx.android.synthetic.main.activity_prestamo_libros.*
+import kotlinx.android.synthetic.main.activity_prestamo_libros.btnGuardar
+import kotlinx.android.synthetic.main.activity_prestamo_libros.btnVisualizar
+import kotlinx.android.synthetic.main.activity_prestamo_libros.txtNumeroLibro
 import java.util.Calendar
 import java.util.Date
 
@@ -31,9 +35,32 @@ class PrestamoLibrosActivity : AppCompatActivity() {
         dato.append(txtFechaPrestamo.text.toString()).append("|")
         dato.append(txtFechaDevolucion.text.toString())
         prestamos.put(numero,dato.toString())
-        btnVisualizar.isEnabled = true
-        Toast.makeText(this, "Se ha guardado el préstamo del libro", Toast.LENGTH_SHORT).show()
-        limpiarCampos()
+        noVacio()
+        if (noVacio()== true){
+            btnVisualizar.isEnabled = true
+            Toast.makeText(this, "Se ha guardado el préstamo del libro", Toast.LENGTH_SHORT).show()
+            limpiarCampos()
+        }
+    }
+
+    fun noVacio() : Boolean{
+        if(txtNumeroLibro.text.toString().isEmpty()) {
+            txtNumeroLibro.error ="Debe rellenar número de libro"
+            return false
+        }else if(txtNumeroPrestamoLibro.text.toString().isEmpty()){
+            txtNumeroPrestamoLibro.error = "Debe rellenar el Nombre"
+            return false
+        }
+
+        if(txtFechaPrestamo.text.toString().isEmpty()) {
+            txtFechaPrestamo.error ="Debe rellenar el autor"
+            return false
+        }
+        if(txtNumeroCuenta.text.toString().isEmpty()) {
+            txtNumeroCuenta.error ="Debe rellenar la fecha"
+            return false
+        }
+        return true
     }
 
     private fun visualizar() {

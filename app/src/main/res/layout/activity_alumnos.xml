@@ -11,170 +11,180 @@
         android:id="@+id/txvAlumnos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="124dp"
+        android:layout_marginTop="22dp"
         android:background="#CEFBFBFB"
         android:fontFamily="sans-serif-black"
-        android:text="Alumnos"
+        android:text="@string/txvtituloalumnos"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColorHighlight="@color/black"
         android:textColorLink="#0B0A0A"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imvNumeroCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginBottom="114dp"
+        android:contentDescription="@string/imgnumerocuenta"
+        app:layout_constraintBottom_toTopOf="@+id/txtNombreCarrera"
+        app:layout_constraintEnd_toStartOf="@+id/txtNumeroCuenta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txvAlumnos"
+        app:srcCompat="@drawable/numerolibro" />
+
+    <ImageView
+        android:id="@+id/imvNombreCarrera"
+        android:layout_width="0dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="48dp"
+        android:contentDescription="@string/imgnombrecarrera"
+        app:layout_constraintBottom_toTopOf="@+id/imvFechaIngreso"
+        app:layout_constraintEnd_toStartOf="@+id/txtNombreCarrera"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/pergamino" />
 
     <EditText
         android:id="@+id/txtNumeroCuenta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="76dp"
+        android:layout_marginEnd="26dp"
         android:ems="10"
+        android:hint="@string/txtnumerocuenta"
         android:inputType="number"
-        android:hint="Numero de Cuenta"
         android:maxLength="10"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/imvNumeroCuenta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imvNumeroCuenta"
+        android:importantForAutofill="no" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:srcCompat="@drawable/numerolibro" />
-
-    <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imgNombreAlumno"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="201dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="130dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        android:layout_height="47dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="80dp"
+        android:contentDescription="@string/imgnombrealumno"
+        app:layout_constraintBottom_toBottomOf="@+id/imvNombreCarrera"
         app:layout_constraintEnd_toStartOf="@+id/txtNombreAlumno"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imvNumeroCuenta"
         app:srcCompat="@drawable/libro1" />
 
     <EditText
         android:id="@+id/txtNombreAlumno"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="6dp"
+        android:layout_marginEnd="62dp"
         android:ems="10"
+        android:hint="@string/txtnombrealumno"
         android:inputType="textPersonName"
-        android:hint="Nonbre de Alumno"
         android:maxLength="30"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView2" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="56dp"
-        android:layout_height="71dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="382dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txtNombreCarrera"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.944"
-        app:srcCompat="@drawable/editorial" />
+        app:layout_constraintStart_toEndOf="@+id/imgNombreAlumno"
+        app:layout_constraintTop_toTopOf="@+id/imgNombreAlumno"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/txtNombreCarrera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="77dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginEnd="61dp"
         android:ems="10"
+        android:hint="@string/txtnombrecarrera"
         android:inputType="textPersonName"
-        android:hint="Nombre de Carrera"
         android:maxLength="30"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="@+id/imvNombreCarrera"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView4" />
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="37dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="282dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/txtFechaIngreso"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:srcCompat="@drawable/fecha" />
-
-    <EditText
-        android:id="@+id/txtFechaIngreso"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="77dp"
-        android:layout_marginBottom="5dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="Fecha de Ingreso"
-        android:maxLength="10"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView5" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="55dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:srcCompat="@drawable/email" />
+        app:layout_constraintStart_toEndOf="@+id/imvNombreCarrera"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/txtCorreo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="7dp"
+        android:layout_marginEnd="62dp"
         android:ems="10"
-        android:maxLength="30"
+        android:hint="@string/txtcorreoelectronico"
         android:inputType="textPersonName"
-        android:hint="Correo Electronico"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="@+id/imageView6" />
+        android:maxLength="30"
+        app:layout_constraintBottom_toBottomOf="@+id/imvCorreo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imvCorreo"
+        android:importantForAutofill="no" />
 
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="11dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="61dp"
-        android:text="Guardar"
-        app:iconTint="#070707"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnVer"
+    <ImageView
+        android:id="@+id/imvCorreo"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="25dp"
+        android:contentDescription="@string/imgcorreoelectronico"
+        app:layout_constraintEnd_toStartOf="@+id/txtCorreo"
         app:layout_constraintStart_toStartOf="parent"
-        app:rippleColor="#2E2727" />
+        app:layout_constraintTop_toBottomOf="@+id/imvFechaIngreso"
+        app:srcCompat="@drawable/email" />
 
     <Button
         android:id="@+id/btnVer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="62dp"
-        android:text="Visualizar"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="11dp"
+        android:text="@string/btnvisualizar"
         app:iconTint="#0C0C0C"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnSave" />
+        app:layout_constraintStart_toEndOf="@+id/btnSave"
+        app:layout_constraintTop_toBottomOf="@+id/txtCorreo" />
+
+    <EditText
+        android:id="@+id/txtFechaIngreso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="62dp"
+        android:clickable="false"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/txtfechaingreso"
+        android:inputType="textPersonName"
+        android:maxLength="10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imvFechaIngreso"
+        app:layout_constraintTop_toTopOf="@+id/imvFechaIngreso"
+        android:importantForAutofill="no" />
+
+    <ImageView
+        android:id="@+id/imvFechaIngreso"
+        android:layout_width="0dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="28dp"
+        android:contentDescription="@string/imgfechaingreso"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txtFechaIngreso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/fecha" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="27dp"
+        android:text="@string/btnguarda"
+        app:iconTint="#070707"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnVer"
+        app:layout_constraintEnd_toStartOf="@+id/btnVer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="#2E2727" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
