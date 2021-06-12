@@ -11,7 +11,7 @@
         android:id="@+id/txvTituloA"
         android:layout_width="269dp"
         android:layout_height="0dp"
-        android:layout_marginStart="58dp"
+        android:layout_marginStart="76dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="221dp"
         android:text="Visualizacion de Alumnos"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/txtMBuscar"
         android:layout_width="292dp"
         android:layout_height="0dp"
         android:layout_marginStart="56dp"
@@ -29,6 +29,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Ingrese un numero de cuenta"
+        android:maxLength="10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txvTituloA" />
 
@@ -39,8 +40,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="132dp"
         android:text="Buscar"
-        app:icon="@drawable/search_32px"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintStart_toStartOf="@+id/txtMBuscar"
         app:layout_constraintTop_toBottomOf="@+id/txvTituloA" />
 
     <ImageView
@@ -50,13 +50,13 @@
         android:layout_marginEnd="3dp"
         android:layout_marginBottom="39dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView11"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName3"
+        app:layout_constraintEnd_toStartOf="@+id/txtMNombre"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView12"
         app:srcCompat="@drawable/libro1" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/txtMNombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="39dp"
@@ -66,10 +66,10 @@
         android:text="Nombre de Alumno"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+        app:layout_constraintTop_toBottomOf="@+id/txtMNumero" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName4"
+        android:id="@+id/txtMCarrera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="55dp"
@@ -77,7 +77,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Nombre de  Carrera"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName5"
+        app:layout_constraintBottom_toTopOf="@+id/txtMFecha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView11" />
 
@@ -87,14 +87,14 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="53dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName6"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName5"
+        app:layout_constraintBottom_toTopOf="@+id/txtMCorreo"
+        app:layout_constraintEnd_toStartOf="@+id/txtMFecha"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView11"
         app:srcCompat="@drawable/fecha" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/txtMFecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="2dp"
@@ -112,12 +112,12 @@
         android:layout_marginStart="15dp"
         android:layout_marginBottom="60dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName6"
+        app:layout_constraintEnd_toStartOf="@+id/txtMCorreo"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/email" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName6"
+        android:id="@+id/txtMCorreo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="17dp"
@@ -138,7 +138,7 @@
         android:layout_marginEnd="54dp"
         android:layout_marginBottom="25dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView9"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName4"
+        app:layout_constraintEnd_toStartOf="@+id/txtMCarrera"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView7"
         app:srcCompat="@drawable/pergamino" />
@@ -150,13 +150,13 @@
         android:layout_marginEnd="7dp"
         android:layout_marginBottom="34dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView7"
-        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName7"
+        app:layout_constraintEnd_toStartOf="@+id/txtMNumero"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txvTituloA"
         app:srcCompat="@drawable/numerolibro" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName7"
+        android:id="@+id/txtMNumero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"

@@ -25,4 +25,8 @@
     <string name="btnguarda">Guardar</string>
     <string name="btnvisualizar">Visualizar</string>
     <string name="txvmostrar_calendario_icono">Mostrar Calendario icono</string>
+    <string name="btnlibros">Libros</string>
+    <string name="btnalumnos">Alumnos</string>
+    <string name="btnprestamolibro">Préstamo Libros</string>
+    <string name="txvbienvenido">Bienvenido al Proyecto 1</string>
 </resources>

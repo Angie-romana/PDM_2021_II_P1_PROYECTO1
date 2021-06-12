@@ -35,7 +35,7 @@ class AlumnosActivity : AppCompatActivity() {
 
     private fun visualizar() {
         val intent = Intent(this, VisualizarAlumnosActivity::class.java)
-        intent.putExtra("Alumnos", alumno)
+        intent.putExtra("alumnos", alumno)
         startActivity(intent)
     }
     private fun capturarFecha() {
@@ -54,7 +54,7 @@ class AlumnosActivity : AppCompatActivity() {
         dpd.show()
     }
     private fun inicializar() {
-        btnSave.isEnabled = false
+       // btnSave.isEnabled = false
     }
 
     private fun limpiarCampos(){

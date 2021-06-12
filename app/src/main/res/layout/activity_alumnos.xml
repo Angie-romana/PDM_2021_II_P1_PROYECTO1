@@ -4,16 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondom"
+    android:background="@drawable/fondo1"
     tools:context=".AlumnosActivity">
 
     <TextView
         android:id="@+id/txvAlumnos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="116dp"
-        android:text="ALUMNOS"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="124dp"
+        android:background="#CEFBFBFB"
+        android:fontFamily="sans-serif-black"
+        android:text="Alumnos"
+        android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColorHighlight="@color/black"
         android:textColorLink="#0B0A0A"
@@ -26,8 +29,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="76dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Numero de Cuenta"
+        android:inputType="number"
+        android:hint="Numero de Cuenta"
+        android:maxLength="10"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -63,7 +67,8 @@
         android:layout_marginBottom="6dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Nonbre de Alumno"
+        android:hint="Nonbre de Alumno"
+        android:maxLength="30"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView2" />
@@ -75,12 +80,13 @@
         android:layout_marginStart="35dp"
         android:layout_marginEnd="33dp"
         android:layout_marginBottom="382dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/txtNombreCarrera"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/pergamino" />
+        app:layout_constraintVertical_bias="0.944"
+        app:srcCompat="@drawable/editorial" />
 
     <EditText
         android:id="@+id/txtNombreCarrera"
@@ -90,7 +96,8 @@
         android:layout_marginBottom="1dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Nombre de Carrera"
+        android:hint="Nombre de Carrera"
+        android:maxLength="30"
         app:layout_constraintBottom_toBottomOf="@+id/imageView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView4" />
@@ -116,17 +123,18 @@
         android:layout_marginBottom="5dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Fecha de Ingreso"
+        android:hint="Fecha de Ingreso"
+        android:maxLength="10"
         app:layout_constraintBottom_toBottomOf="@+id/imageView5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView5" />
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="42dp"
+        android:layout_width="55dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
         app:srcCompat="@drawable/email" />
@@ -138,8 +146,9 @@
         android:layout_marginStart="33dp"
         android:layout_marginTop="7dp"
         android:ems="10"
+        android:maxLength="30"
         android:inputType="textPersonName"
-        android:text="Correo Electronico"
+        android:hint="Correo Electronico"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
         app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
@@ -151,7 +160,6 @@
         android:layout_marginEnd="27dp"
         android:layout_marginBottom="61dp"
         android:text="Guardar"
-        app:icon="@drawable/save"
         app:iconTint="#070707"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnVer"
@@ -164,7 +172,6 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="62dp"
         android:text="Visualizar"
-        app:icon="@drawable/visualizar"
         app:iconTint="#0C0C0C"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

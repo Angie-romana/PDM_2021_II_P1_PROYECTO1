@@ -9,23 +9,28 @@
 
     <TextView
         android:id="@+id/txvTituloPrincipal"
-        android:layout_width="164dp"
-        android:layout_height="0dp"
+        android:layout_width="251dp"
+        android:layout_height="77dp"
         android:layout_marginTop="124dp"
         android:layout_marginBottom="80dp"
+        android:background="#B9F8F4F4"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Bienvenido al Proyecto 1"
+        android:text="@string/txvbienvenido"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/btnLibros"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnLibros"
-        android:layout_width="147dp"
-        android:layout_height="0dp"
+        android:layout_width="151dp"
+        android:layout_height="65dp"
         android:layout_marginBottom="34dp"
-        android:text="Libros"
+        android:text="@string/btnlibros"
         app:layout_constraintBottom_toTopOf="@+id/btnPrestamoLibro"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,10 +38,10 @@
 
     <Button
         android:id="@+id/btnAlumnos"
-        android:layout_width="147dp"
-        android:layout_height="0dp"
+        android:layout_width="151dp"
+        android:layout_height="65dp"
         android:layout_marginBottom="239dp"
-        android:text="Alumnos"
+        android:text="@string/btnalumnos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,10 +49,10 @@
 
     <Button
         android:id="@+id/btnPrestamoLibro"
-        android:layout_width="146dp"
-        android:layout_height="0dp"
+        android:layout_width="151dp"
+        android:layout_height="65dp"
         android:layout_marginBottom="34dp"
-        android:text="Prestamo Libros"
+        android:text="@string/btnprestamolibro"
         app:layout_constraintBottom_toTopOf="@+id/btnAlumnos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
